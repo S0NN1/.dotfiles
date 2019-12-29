@@ -6,6 +6,7 @@ function update-dotfiles() {
   cd "${ZDOTDIR:-$HOME}/.dotfiles/"
   git pull --recurse-submodules
   cd $CURRENT_PATH
+  source ~/.zshrc
 }
 
 
@@ -21,6 +22,7 @@ case "$OSTYPE" in
   linux-gnu)
     alias localip="hostname -I"
   ;;
+  
 esac
 
 

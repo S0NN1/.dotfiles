@@ -13,8 +13,9 @@ fi
 # Load personal functions/aliases
 source "${ZDOTDIR:-$HOME}/.dotfiles/zsh/functions.sh"
 source "${ZDOTDIR:-$HOME}/.dotfiles/zsh/aliases.sh"
-source "${ZDOTDIR:-$HOME}/.dotfiles/private/zsh/aliases.sh"
-
+if [[ -s ${ZDOTDIR:-$HOME}/.dotfiles/private/zsh/aliases.sh ]]; then
+  source "${ZDOTDIR:-$HOME}/.dotfiles/private/zsh/aliases.sh"
+fi
 
 # macOS iTerm 2 intergration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
