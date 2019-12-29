@@ -85,6 +85,10 @@ case "$OSTYPE" in
 esac
 
 
+# Fix WSL weird folder colors
+LS_COLORS="ow=01;36;40" && export LS_COLORS
+
+
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
