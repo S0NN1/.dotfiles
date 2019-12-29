@@ -1,3 +1,5 @@
+[![Mirrored repo](https://img.shields.io/static/v1?label=Mirroring&message=GitLab%20%3E%20GitHub&color=blue)](https://gitlab.com/Hecsall/dotfiles)
+
 # Dotfiles
 Just a dotfiles repo with my aliases, functions and zsh configurations.
 
@@ -19,7 +21,7 @@ Just a dotfiles repo with my aliases, functions and zsh configurations.
 > **Please note:**\
 inside `.zshrc` and `install.sh` you will find some lines referring to files inside the `private/` folder.\
 Thats a *private git submodule* where i store other aliases and configurations that contains sensitive data (such as IP addresses , ports or git configurations).\
-If you want to use my dotfiles make sure to delete those lines or it will probably spit out some errors.
+The install script will ignore those lines.
 
 Run the `install.sh` file.\
 If you already have those `".zsomething"` files, make sure to backup them, because the installer will overwrite any existing symlink.
