@@ -18,7 +18,7 @@ zstyle ':prezto:*:*' color 'yes'
 # zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
 
 # Set the Zsh modules to load (man zshmodules).
-# zstyle ':prezto:load' zmodule 'attr' 'stat'
+zstyle ':prezto:load' zmodule 'zprof'
 
 # Set the Zsh functions to load (man zshcontrib).
 zstyle ':prezto:load' zfunction 'zmv'
@@ -34,6 +34,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'syntax-highlighting' \
   'history-substring-search' \
   'contrib-prompt' \
   'prompt'

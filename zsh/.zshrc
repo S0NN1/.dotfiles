@@ -13,25 +13,17 @@ fi
 # Load personal functions/aliases
 source "${ZDOTDIR:-$HOME}/.dotfiles/zsh/functions.sh"
 source "${ZDOTDIR:-$HOME}/.dotfiles/zsh/aliases.sh"
+# Load private aliases
 if [[ -s ${ZDOTDIR:-$HOME}/.dotfiles/private/zsh/aliases.sh ]]; then
   source "${ZDOTDIR:-$HOME}/.dotfiles/private/zsh/aliases.sh"
 fi
 
-# macOS iTerm 2 intergration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
-# Not sure if i need these anymore on macOS
-# export PATH=/usr/local/bin:$PATH
-# export PATH=/usr/bin:$PATH
-# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-
-# Node Version Manager
-# https://github.com/nvm-sh/nvm#usage
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Node Version Manager (https://github.com/nvm-sh/nvm#usage)
+# Commented out because was slowing WSL startup
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # Spaceship Customizations
@@ -61,6 +53,8 @@ case "$OSTYPE" in
 
   # ~ macOS ~
   darwin*)
+    # macOS iTerm 2 intergration
+    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
   ;;
 
