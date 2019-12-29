@@ -1,7 +1,8 @@
 [![Mirrored repo](https://img.shields.io/static/v1?label=Mirroring&message=GitLab%20%3E%20GitHub&color=blue)](https://gitlab.com/Hecsall/dotfiles)
 
 # Dotfiles
-Just a dotfiles repo with my aliases, functions and zsh configurations.
+Just a dotfiles repo with my aliases, functions and zsh configurations.\
+I mainly work on macOS, but sometimes i work on Windows using WSL (Windows Subsystem for Linux). Visual Studio Code is my primary code editor and I (rarely) use nano when I have to make small changes from terminal.
 
 ## **Requirements**
 - [ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
