@@ -18,6 +18,10 @@ ln -sfn $ABS_DOTFILES_PATH/zsh/.zprofile ~/.zprofile
 ln -sfn $ABS_DOTFILES_PATH/zsh/.zshenv ~/.zshenv
 ln -sfn $ABS_DOTFILES_PATH/zsh/.zshrc ~/.zshrc
 
+# Nano (https://github.com/serialhex/nano-highlight)
+ln -sfn $ABS_DOTFILES_PATH/.nanorc ~/.nanorc
+ln -sfn $ABS_DOTFILES_PATH/.nano ~/.nano
+
 
 ############################
 # Install Private dotfiles #

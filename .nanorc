@@ -1,0 +1,25 @@
+set smooth
+
+## Nanorc
+include "~/.nano/nanorc.nanorc"
+
+## C/C++
+# include "~/.nano/c.nanorc"
+
+## Python
+include "~/.nano/python.nanorc"
+
+## Sh scripts
+include "~/.nano/sh.nanorc"
+
+## CSS
+include "~/.nano/css.nanorc"
+
+## HTML
+include "~/.nano/html.nanorc"
+
+## Markdown
+include "~/.nano/markdown.nanorc"
+
+## JavaScript
+include "~/.nano/js.nanorc"
