@@ -59,6 +59,10 @@ That's all.
 **Node JS**
 - I prefer to use Node 10.17.0 since some packages still do not support Node 12 
 - I use **nvm** ([Node Version Manager](https://github.com/nvm-sh/nvm)) to manage different versions of Node:\
+    > **Note:**\
+    I've temporarily disabled nvm because it was slowing down WSL startup, probably an issue that will be resolved with WSL2 coming in 2020.\
+    If i need it i'll just have to remove the comment from .zshrc and `source .zshrc`
+
     This will install Node 10.17.0 as the "default" Node
     ```sh
     $ nvm install 10.17.0
