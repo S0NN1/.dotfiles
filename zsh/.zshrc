@@ -21,9 +21,11 @@ fi
 
 # Node Version Manager (https://github.com/nvm-sh/nvm#usage)
 # Commented out because was slowing WSL startup
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+init_nvm () {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+}
 
 
 # Spaceship Customizations
@@ -55,7 +57,8 @@ case "$OSTYPE" in
   darwin*)
     # macOS iTerm 2 intergration
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+    # Init NVM only on macOs
+    init_nvm
   ;;
 
   # ~ WSL (Bash on Windows 10) ~
