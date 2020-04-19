@@ -20,7 +20,6 @@ fi
 
 
 # Node Version Manager (https://github.com/nvm-sh/nvm#usage)
-# Commented out because was slowing WSL startup
 init_nvm () {
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

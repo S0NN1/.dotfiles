@@ -23,3 +23,6 @@ include "~/.nano/markdown.nanorc"
 
 ## JavaScript
 include "~/.nano/js.nanorc"
+
+## Nginx
+include "~/.nano/nginx.nanorc"
