@@ -62,6 +62,8 @@ case "$OSTYPE" in
 
   # ~ WSL (Bash on Windows 10) ~
   linux-gnu)
+    init_nvm
+
     # ~ Spaceship Customizations ~
     # SPACESHIP_CHAR_SYMBOL=🍙 // Buggy on Windows
     SPACESHIP_PACKAGE_SHOW=false
@@ -94,3 +96,5 @@ LS_COLORS="ow=01;36;40" && export LS_COLORS
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+fpath=($fpath "/home/simone/.zfunctions")
+fpath=($fpath "/home/simone/.zfunctions")
