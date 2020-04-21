@@ -22,7 +22,7 @@ case "$OSTYPE" in
   linux-gnu)
     alias localip="hostname -I"
   ;;
-  
+
 esac
 
 
