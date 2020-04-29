@@ -11,7 +11,7 @@ case "$OSTYPE" in
 
   # ~ macOS ~
   darwin*)
-    
+
   ;;
 
   # ~ WSL (Bash on Windows 10) ~
@@ -20,7 +20,7 @@ case "$OSTYPE" in
     alias l="ls -1ah --color=auto"
     alias ls="ls -G --color=auto"
   ;;
-  
+
 esac
 
 # Git
