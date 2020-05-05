@@ -62,6 +62,7 @@ case "$OSTYPE" in
 
   # ~ WSL (Bash on Windows 10) ~
   linux-gnu)
+    init_nvm
     # ~ Spaceship Customizations ~
     # SPACESHIP_CHAR_SYMBOL=🍙 // Buggy on Windows
     SPACESHIP_PACKAGE_SHOW=false
