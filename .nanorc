@@ -26,3 +26,6 @@ include "~/.nano/js.nanorc"
 
 ## Nginx
 include "~/.nano/nginx.nanorc"
+
+## Toml
+include "~/.nano/toml.nanorc"

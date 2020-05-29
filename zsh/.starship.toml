@@ -1,0 +1,7 @@
+[package]
+disabled = true
+
+
+[directory]
+truncate_to_repo = true
+truncation_length = 10

@@ -10,13 +10,9 @@ cd $CURRENT_PATH # return to previous location
 # Install dotfiles #
 ####################
 
-# ZSH and Prezto
-ln -sfn $ABS_DOTFILES_PATH/zsh/.zlogin ~/.zlogin
-ln -sfn $ABS_DOTFILES_PATH/zsh/.zlogout ~/.zlogout
-ln -sfn $ABS_DOTFILES_PATH/zsh/.zpreztorc ~/.zpreztorc
-ln -sfn $ABS_DOTFILES_PATH/zsh/.zprofile ~/.zprofile
-ln -sfn $ABS_DOTFILES_PATH/zsh/.zshenv ~/.zshenv
+# ZSH & Starship prompt
 ln -sfn $ABS_DOTFILES_PATH/zsh/.zshrc ~/.zshrc
+ln -sfn $ABS_DOTFILES_PATH/zsh/.starship.toml ~/.starship.toml
 
 # Nano (https://github.com/serialhex/nano-highlight)
 ln -sfn $ABS_DOTFILES_PATH/.nanorc ~/.nanorc
