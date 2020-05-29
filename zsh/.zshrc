@@ -37,6 +37,11 @@ init_nvm () {
 }
 
 
+# Arrows for history-substring-search
+HSS_UP_ARROW="^[[A"
+HSS_DOWN_ARROW="^[[B"
+
+
 # Config based on platform
 case "$OSTYPE" in
 
@@ -52,6 +57,9 @@ case "$OSTYPE" in
   linux-gnu)
     # Init NVM on WSL
     init_nvm
+    # Arrows for history-substring-search (for WSL)
+    HSS_UP_ARROW="$terminfo[kcuu1]"
+    HSS_DOWN_ARROW="$terminfo[kcud1]"
   ;;
 esac
 
@@ -62,8 +70,8 @@ LS_COLORS="ow=01;36;40" && export LS_COLORS
 
 # Init history-substring-search
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+bindkey $HSS_UP_ARROW history-substring-search-up
+bindkey $HSS_DOWN_ARROW history-substring-search-down
 
 
 # Init Starship prompt

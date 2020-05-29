@@ -10,13 +10,9 @@ cd $CURRENT_PATH # return to previous location
 # Uninstall dotfiles #
 ######################
 
-# ZSH and Prezto
-unlink ~/.zlogin
-unlink ~/.zlogout
-unlink ~/.zpreztorc
-unlink ~/.zprofile
-unlink ~/.zshenv
+# ZSH & Starship prompt
 unlink ~/.zshrc
+unlink ~/.starship.toml
 
 
 ##############################
