@@ -5,13 +5,11 @@ Just a dotfiles repo with my aliases, functions and zsh configurations.\
 I mainly work on macOS, but sometimes i work on Windows using WSL (Windows Subsystem for Linux). Visual Studio Code is my primary code editor and I (rarely) use nano when I have to make small changes from terminal.
 
 ## **Requirements**
+Before running the `install.sh` script, be sure to have all the required dependencies listed below:
 - [ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Prezto](https://github.com/sorin-ionescu/prezto#installation) 
-	(stop at the git clone, don't do the rest)
-- [Prezto contrib](https://github.com/belak/prezto-contrib#usage) (necessary for spaceship prompt)
-- [Spaceship prompt](https://denysdovhan.com/spaceship-prompt/)
+- [Starship prompt](https://starship.rs/)
     ```sh
-    $ npm install -g spaceship-prompt
+    $ curl -fsSL https://starship.rs/install.sh | bash
     ```
 - [Powerline Fonts](https://github.com/powerline/fonts#installation) 
 	(optional, needed only if you want strange symbols or similar things)
@@ -24,9 +22,17 @@ inside `.zshrc` and `install.sh` you will find some lines referring to files ins
 Thats a *private git submodule* where i store other aliases and configurations that contains sensitive data (such as IP addresses , ports or git configurations).\
 The install script will ignore those lines.
 
+The install script will create symlinks for the following files/folders:
+- `~/.zshrc`
+- `~/.nanorc`
+- `~/.nano/`
+- `~/.starship.toml`
+
+If you already have any of the files/folders listed above, make sure to backup them, because the installer will overwrite any existing symlink.
+
 Run the `install.sh` file.\
-If you already have those `".zsomething"` files, make sure to backup them, because the installer will overwrite any existing symlink.
 ```sh
+$ chmod +x install.sh
 $ ./install.sh
 ```
 
@@ -40,9 +46,9 @@ That's all.
 ## **Other notes**
 
 **Python**
-- I usually use Python 3.7
+- I usually use Python 3
 - When working on different python projects i use virtual environments: Python 3 ships with "venv" builtin.\
-    Create the env:
+    To create the env:
     ```sh
     # I usually use "venv" as <env_name>
     $ python3 -m venv <env_name>
@@ -57,24 +63,21 @@ That's all.
     ```
 
 **Node JS**
-- I prefer to use Node 10.17.0 since some packages still do not support Node 12 
-- I use **nvm** ([Node Version Manager](https://github.com/nvm-sh/nvm)) to manage different versions of Node:\
-    > **Note:**\
-    I've temporarily disabled nvm because it was slowing down WSL startup, probably an issue that will be resolved with WSL2 coming in 2020.\
-    If i need it i'll just have to remove the comment from .zshrc and `source .zshrc`
+- I prefer to use Node 12 
+- I use **nvm** ([Node Version Manager](https://github.com/nvm-sh/nvm)) to manage different versions of Node:
 
-    This will install Node 10.17.0 as the "default" Node
+    This will install Node 12 as the "default" Node
     ```sh
-    $ nvm install 10.17.0
+    $ nvm install 12
     ```
-    Then this will install Node 12.13.0 as supplementary version
+    Then this will install Node 10 as supplementary version (for project compatibility)
     ```sh
-    $ nvm install 12.13.0
+    $ nvm install 10
     ```
     Switch version like this
     ```sh
-    # Use Node 12.13.0
-    $ nvm use 12
-    # Now go back to the "default" (Node 10.17.0)
-    $ nvm use default
+    # Use Node 10
+    $ nvm use 10
+    # Now go back to the "default" (Node 12)
+    $ nvm use default # or nvm use 12
     ```
