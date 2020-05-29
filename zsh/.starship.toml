@@ -1,7 +1,28 @@
-[package]
-disabled = true
-
-
 [directory]
 truncate_to_repo = true
 truncation_length = 10
+
+[package]
+disabled = true
+symbol = " "
+
+[python]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[docker]
+symbol = " "

@@ -11,8 +11,9 @@ Before running the `install.sh` script, be sure to have all the required depende
     ```sh
     $ curl -fsSL https://starship.rs/install.sh | bash
     ```
-- [Powerline Fonts](https://github.com/powerline/fonts#installation) 
-	(optional, needed only if you want strange symbols or similar things)
+- [Nerd Fonts](https://www.nerdfonts.com/)\
+    Nerd Fonts includes "dev icons" along with the normal font, i used `MesloLGMDZ Nerd Font` in my terminal and `CaskaydiaCove Nerd Font` in Visual Studio Code.\
+    Without Nerd Fonts you won't be able to see the icons i used inside `.starship.toml`, go here to see how it looks https://starship.rs/presets/#nerd-font-symbols
 
 
 ## **Installation**
