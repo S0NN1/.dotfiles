@@ -3,7 +3,7 @@ truncate_to_repo = true
 truncation_length = 10
 
 [character]
-symbol = "►"
+symbol = " "
 
 [package]
 disabled = true
