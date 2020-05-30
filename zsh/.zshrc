@@ -8,10 +8,12 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 
 # History settings
-export HISTFILESIZE=100000
-export HISTSIZE=100000
 export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 setopt EXTENDED_HISTORY
+setopt inc_append_history
+setopt share_history
 setopt HIST_FIND_NO_DUPS
 
 
