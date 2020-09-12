@@ -58,7 +58,7 @@ case "$OSTYPE" in
   # ~ WSL (Linux on Windows 10) ~
   linux-gnu)
     # Init NVM on WSL
-    # init_nvm
+    init_nvm
     # Arrows for history-substring-search (for WSL)
     HSS_UP_ARROW="$terminfo[kcuu1]"
     HSS_DOWN_ARROW="$terminfo[kcud1]"
