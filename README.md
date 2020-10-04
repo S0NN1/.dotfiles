@@ -40,6 +40,12 @@ $ ./install.sh
 This will symlink the config files to the correct paths, just make sure you don't move the dotfiles folder elsewhere after running the install (it will break the symlinks, you know).
 I use to keep that folder in `~/.dotfiles`
 
+Next run this command:
+```sh
+sudo git clone https://github.com/zsh-users/zsh-history-substring-search /usr/local/share/zsh-history-substring-search
+```
+This will clone `zsh-history-substring-search` to `/usr/local/share`, it's needed for the "previous command" function (when you press the Up-Arrow).
+
 That's all.
 
 ---

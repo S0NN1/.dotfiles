@@ -9,6 +9,9 @@ symbol = " "
 disabled = true
 symbol = " "
 
+[battery]
+disabled = true
+
 [python]
 symbol = " "
 
@@ -16,6 +19,7 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
+disabled = true
 symbol = " "
 
 [hg_branch]
