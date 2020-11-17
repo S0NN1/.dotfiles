@@ -53,6 +53,7 @@ case "$OSTYPE" in
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
     # Init NVM on macOs
     init_nvm
+    export PATH="$PATH:/Users/simone/Documents/flutter/bin"
   ;;
 
   # ~ WSL (Linux on Windows 10) ~
