@@ -10,9 +10,8 @@ cd $CURRENT_PATH # return to previous location
 # Install dotfiles #
 ####################
 
-# ZSH & Starship prompt
+# ZSH
 ln -sfn $ABS_DOTFILES_PATH/zsh/.zshrc ~/.zshrc
-ln -sfn $ABS_DOTFILES_PATH/zsh/.starship.toml ~/.starship.toml
 
 # Nano (https://github.com/serialhex/nano-highlight)
 ln -sfn $ABS_DOTFILES_PATH/.nanorc ~/.nanorc
