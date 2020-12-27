@@ -43,6 +43,7 @@ case "$OSTYPE" in
     # LS aliases
     alias l='ls -1ah'
     alias la='ls -lah'
+    unalias ls
   ;;
 
 
