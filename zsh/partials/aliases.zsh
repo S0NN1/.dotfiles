@@ -25,6 +25,7 @@ case "$OSTYPE" in
 
   # ~ WSL (Linux on Windows 10) ~
   linux-gnu)
+    # LS aliases
     alias l='ls -1ah --color=auto'
     alias la='ls -lah --color=auto'
     alias ls='ls -G --color=auto'
@@ -33,6 +34,20 @@ case "$OSTYPE" in
   
   # ~ FreeBSD (TrueNAS) ~
   freebsd*)
+   
+  ;;
+
+
+  # ~ Alpine Linux (iSH iOS) ~
+  linux-musl*)
+    # LS aliases
+    alias l='ls -1ah'
+    alias la='ls -lah'
+  ;;
+
+
+  # ~ Alpine Linux? (Termux Android) ~
+  linux-android*)
    
   ;;
 esac

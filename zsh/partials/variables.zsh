@@ -61,4 +61,23 @@ case "$OSTYPE" in
       '%B%F{blue}TrueNAS ◆%f%b '
     )
   ;;
+
+
+  # ~ Alpine Linux (iSH iOS) ~
+  linux-musl*)
+    export PROMPT_COMPONENTS=(
+      '$PYTHON_VENV_PROMPT'
+      '%B%F{cyan}%~%f%b'
+      '$(gitprompt)'
+      '${NODE_PROMPT}'
+      $'\n'
+      $'%B%F{blue}iPad \UF8FF%f%b '
+    )
+  ;;
+
+
+  # ~ Alpine Linux? (Termux Android) ~
+  linux-android*)
+   
+  ;;
 esac
