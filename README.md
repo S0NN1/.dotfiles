@@ -2,19 +2,13 @@
 
 # Dotfiles
 Just a dotfiles repo with my aliases, functions and zsh configurations.\
-I mainly work on macOS, but sometimes i work on Windows using WSL (Windows Subsystem for Linux). Visual Studio Code is my primary code editor and I (rarely) use nano when I have to make small changes from terminal.
+I mainly work on macOS, but sometimes i work on Windows using WSL (Windows Subsystem for Linux). Visual Studio Code is my primary code editor and I use nano when I have to make small changes from terminal.
 
 ## **Requirements**
 Before running the `install.sh` script, be sure to have all the required dependencies listed below:
 - [ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Starship prompt](https://starship.rs/)
-    ```sh
-    $ curl -fsSL https://starship.rs/install.sh | bash
-    ```
 - [Nerd Fonts](https://www.nerdfonts.com/)\
-    Nerd Fonts includes "dev icons" along with the normal font, i used `MesloLGMDZ Nerd Font` in my terminal and `CaskaydiaCove Nerd Font` in Visual Studio Code.\
-    Without Nerd Fonts you won't be able to see the icons i used inside `.starship.toml`, go here to see how it looks https://starship.rs/presets/#nerd-font-symbols
-
+    Nerd Fonts includes "dev icons" along with the normal font, i used `MesloLGMDZ Nerd Font` in my terminal and `CaskaydiaCove Nerd Font` in Visual Studio Code.
 
 ## **Installation**
 
@@ -27,11 +21,10 @@ The install script will create symlinks for the following files/folders:
 - `~/.zshrc`
 - `~/.nanorc`
 - `~/.nano/`
-- `~/.starship.toml`
 
 If you already have any of the files/folders listed above, make sure to backup them, because the installer will overwrite any existing symlink.
 
-Run the `install.sh` file.\
+Run the `install.sh` file.
 ```sh
 $ chmod +x install.sh
 $ ./install.sh
