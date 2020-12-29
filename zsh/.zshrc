@@ -44,7 +44,7 @@ source "$PARTIALS_PATH/git-prompt-theme.zsh"
 source "$PARTIALS_PATH/node.zsh"
 # Python
 source "$PARTIALS_PATH/python.zsh"
+# Time
+source "$PARTIALS_PATH/time.zsh"
 # Prompt definition
 source "$PARTIALS_PATH/prompt.zsh"
-
-
