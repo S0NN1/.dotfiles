@@ -27,4 +27,4 @@ function precmd() {
   fi
 }
 
-RPROMPT='%F{16}$(if [ $cmd_time ]; then echo "($cmd_time) "; fi)$(date "+%F %T %z")%f'
+RPROMPT='%F{223}$(if [ $cmd_time ]; then echo "$cmd_time"; fi)%f'
