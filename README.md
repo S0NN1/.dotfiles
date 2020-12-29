@@ -7,8 +7,8 @@ I mainly work on macOS, but sometimes i work on Windows using WSL (Windows Subsy
 ## **Requirements**
 Before running the `install.sh` script, be sure to have all the required dependencies listed below:
 - [ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Nerd Fonts](https://www.nerdfonts.com/)\
-    Nerd Fonts includes "dev icons" along with the normal font, i used `MesloLGMDZ Nerd Font` in my terminal and `CaskaydiaCove Nerd Font` in Visual Studio Code.
+- [Nerd Fonts](https://www.nerdfonts.com/) _*optional_\
+    Nerd Fonts includes "dev icons" along with the normal font, i used `MesloLGMDZ Nerd Font` in my terminal and `CaskaydiaCove Nerd Font` in Visual Studio Code. It's only really needed if you plan to use such icons.
 
 ## **Installation**
 
@@ -22,7 +22,7 @@ The install script will create symlinks for the following files/folders:
 - `~/.nanorc`
 - `~/.nano/`
 
-If you already have any of the files/folders listed above, make sure to backup them, because the installer will overwrite any existing symlink.
+If you already have any of the files/folders listed above, make sure to backup them, because the installer will overwrite any existing file/symlink.
 
 Run the `install.sh` file.
 ```sh
@@ -38,6 +38,11 @@ That's all.
 ---
 
 ## **Other notes**
+
+**ZSH config**\
+After trying Oh-my-zsh, spaceship, zprezto and starship, i decided to write my prompt by myself, including only the features i needed, this way it's much, much faster.\
+I divided every bit of functionality in different files inside the `partials/` folder.\
+I included [git-prompt.zsh](https://github.com/woefe/git-prompt.zsh), that manages the git status asynchronously to avoid an unresponsive terminal, and [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) to search previously used commands.
 
 **Python**
 - I usually use Python 3
