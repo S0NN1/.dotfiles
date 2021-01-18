@@ -3,6 +3,7 @@
 zmodload zsh/zprof
 autoload zmv
 autoload -Uz compinit && compinit
+autoload -U add-zsh-hook
 
 
 # Case insensitive autocompletion
