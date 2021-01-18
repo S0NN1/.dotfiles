@@ -58,7 +58,7 @@ case "$OSTYPE" in
       '$(gitprompt)'
       '${NODE_PROMPT}'
       $'\n'
-      '%B%F{blue}TrueNAS ◆%f%b '
+      '%B%F{blue}$(hostname) ◆%f%b '
     )
   ;;
 
