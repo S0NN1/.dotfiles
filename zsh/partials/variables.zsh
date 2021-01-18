@@ -58,7 +58,7 @@ case "$OSTYPE" in
       '$(gitprompt)'
       '${NODE_PROMPT}'
       $'\n'
-      '%B%F{blue}$(hostname -s) ◆%f%b '
+      '%B%F{blue}${(C)$(hostname -s)} ◆%f%b '
     )
   ;;
 
