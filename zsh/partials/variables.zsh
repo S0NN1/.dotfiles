@@ -66,7 +66,7 @@ case "$OSTYPE" in
 
   # ~ Alpine Linux (iSH iOS) ~
   linux-musl*)
-    export PROMPT_COMPONENTS=(
+    PROMPT_COMPONENTS=(
       '$PYTHON_VENV_PROMPT'
       '%B%F{cyan}%~%f%b'
       '$(gitprompt)'
