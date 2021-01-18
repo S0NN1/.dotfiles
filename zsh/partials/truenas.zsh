@@ -1,11 +1,9 @@
 
 function update-jails() {
-    # Get list of Jail names
-    jails_names="$(jls -N name)"
-
     dotfiles_path="/root/.dotfiles"
 
-    for jail_name in $jails_names; do 
+    # Get list of Jail names
+    for jail_name in $(jls -N name); do 
         
         # Get Jail Hostname and Path inside TrueNAS
         jail_hostname="$(jls -j $jail_name -N host.hostname)";
@@ -38,6 +36,6 @@ function update-jails() {
         # Copy .dotfiles
         cp -rf ~/.dotfiles ${jail_path}/root
         iocage exec $jail_hostname "~/.dotfiles/install.sh"
-        
+
     done
 }
