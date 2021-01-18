@@ -34,7 +34,8 @@ case "$OSTYPE" in
   
   # ~ FreeBSD (TrueNAS) ~
   freebsd*)
-   
+    unalias .u
+    alias .u="update-dotfiles && update-jails"
   ;;
 
 

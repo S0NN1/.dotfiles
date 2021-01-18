@@ -35,6 +35,8 @@ if [[ -s ${PRIVATE_PARTIALS_PATH}/aliases.sh ]]; then
 fi
 # Functions
 source "$PARTIALS_PATH/functions.zsh"
+# TrueNAS utils
+source "$PARTIALS_PATH/truenas.zsh"
 # History and Substring search
 source "$PARTIALS_PATH/history.zsh"
 # Git (https://laptrinhx.com/a-fast-customizable-pure-shell-asynchronous-git-prompt-for-zsh-3656470288/)
