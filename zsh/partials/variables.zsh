@@ -61,19 +61,6 @@ case "$OSTYPE" in
       $'\n'
       '%B%F{blue}${(C)$(hostname -s)} ◆%f%b '
     )
-    # Custom prompt based on jail hostname
-    case "$(hostname -s)" in
-      transmission)
-        PROMPT_COMPONENTS=(
-          '$PYTHON_VENV_PROMPT'
-          '%B%F{cyan}%~%f%b'
-          '$(gitprompt)'
-          '${NODE_PROMPT}'
-          $'\n'
-          '%B%F{red}${(C)$(hostname -s)} ⇓%f%b '
-        )
-      ;;
-    esac
   ;;
 
 

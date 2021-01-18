@@ -28,6 +28,10 @@ PRIVATE_PARTIALS_PATH="${ZDOTDIR:-$HOME}/.dotfiles/private/zsh/partials"
 
 # Variables & OS Customs
 source "$PARTIALS_PATH/variables.zsh"
+# Load private variables
+if [[ -s ${PRIVATE_PARTIALS_PATH}/variables.sh ]]; then
+  source "${PRIVATE_PARTIALS_PATH}/variables.sh"
+fi
 # Aliases
 source "$PARTIALS_PATH/aliases.zsh"
 # Load private aliases
