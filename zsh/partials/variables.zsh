@@ -11,7 +11,7 @@ export NVM_AUTO_INIT=false
 
 # Prompt Customization
 export NODE_SYMBOL='⬢'
-export PROMPT_SYMBOL='' # »
+export PROMPT_SYMBOL='異' # »
 export PROMPT_COMPONENTS=(
     '$PYTHON_VENV_PROMPT'
     '%B%F{cyan}%~%f%b'
