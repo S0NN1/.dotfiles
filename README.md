@@ -3,6 +3,7 @@
 # .dotfiles
 
 Just a dotfiles repo with my aliases, functions and zsh configurations. I created a python script to insert api keys, ssh configurations and so on.
+
 Follow the original repo for a detailed info about each component.
 
 ## **Requirements**
