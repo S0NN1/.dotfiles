@@ -12,14 +12,3 @@ cd $CURRENT_PATH # return to previous location
 
 # ZSH & Starship prompt
 unlink ~/.zshrc
-unlink ~/.starship.toml
-
-
-##############################
-# Uninstall Private dotfiles #
-##############################
-
-# Check if private folder exists and is not empty
-if [ -d "$ABS_DOTFILES_PATH/private" ] && [ -n "$(ls -A $ABS_DOTFILES_PATH/private)" ]; then
-    $ABS_DOTFILES_PATH/private/uninstall.sh
-fi

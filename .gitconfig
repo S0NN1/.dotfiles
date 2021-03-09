@@ -1,0 +1,3 @@
+[user]
+	email = --DOT_GITCONFIG_GIT_EMAIL--
+	name = --DOT_GITCONFIG_FULL_NAME--

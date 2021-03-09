@@ -13,6 +13,27 @@ alias gl="git pull"
 alias glog='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
 alias gitgud="git add . ; git commit -m'(ノಠ益ಠ)ノ彡┻━┻' ; git push"
 
+# SSH 
+alias azure="--DOT_ALIAS_SSH--"
+
+# Sudo
+alias kek="sudo"
+
+# Windows
+alias win="cd /mnt/c/Users/sonny/Desktop"
+alias proj="cd /mnt/d/projects"
+
+# Apt
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
+
+# Sonar
+alias sonar="mvn sonar:sonar"
+
+# Star Wars
+alias wars='telnet towel.blinkenlights.nl'
+
+
 
 # Aliases based on OS Type
 case "$OSTYPE" in

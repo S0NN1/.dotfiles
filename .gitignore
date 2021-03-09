@@ -1,0 +1,12 @@
+# Ignore json secrets
+json/
+*.json
+
+# Ignore .dotfiles-private
+.dotfiles-private/
+
+# Ignore VsCode
+.vscode/
+
+# Ignore virtualenv
+scrpit/env/

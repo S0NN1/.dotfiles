@@ -17,12 +17,9 @@ ln -sfn $ABS_DOTFILES_PATH/zsh/.zshrc ~/.zshrc
 ln -sfn $ABS_DOTFILES_PATH/.nanorc ~/.nanorc
 ln -sfn $ABS_DOTFILES_PATH/.nano ~/.nano
 
+# Git config
+ln -sfn $CURRENT_PATH/.gitconfig ~/.gitconfig
 
-############################
-# Install Private dotfiles #
-############################
-
-# Check if private folder exists and is not empty
-if [ -d "$ABS_DOTFILES_PATH/private" ] && [ -n "$(ls -A $ABS_DOTFILES_PATH/private)" ]; then
-    $ABS_DOTFILES_PATH/private/install.sh
-fi
+# Git hooks
+ln -sfn $CURRENT_PATH/.github/pre-commit $CURRENT_PATH/.git/hooks/pre-commit 
+ln -sfn $CURRENT_PATH/.github/pre-push $CURRENT_PATH/.git/hooks/pre-push 

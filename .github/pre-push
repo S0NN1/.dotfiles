@@ -1,0 +1,2 @@
+export CURRENT_PATH=$(pwd)
+python3 $CURRENT_PATH/script/crypt.py -e

@@ -82,3 +82,22 @@ case "$OSTYPE" in
    
   ;;
 esac
+
+# Youtube dl path
+export PATH="$PATH:/home/sonny/.local/bin"
+
+# WSL display export
+export DISPLAY=localhost:0.0
+
+# Apache Spark
+export SPARK_LOCAL_IP=127.0.0.1
+export SPARK_MASTER_HOST=127.0.0.1
+
+# Flutter
+export PATH="$PATH:`pwd`/flutter/bin"
+
+# Nvim
+export PATH="$PATH:/home/sonny/nvim-linux64/bin"
+
+# Contiki-NG
+export PATH="$PATH:/opt/compilers/mspgcc-4.7.3/msp430/bin:$PATH"
