@@ -24,7 +24,7 @@ The install script will create symlinks for the following files/folders:
 - `~/.nano/`
 - `~/.gitconfig`
 
-It will also move `pre-commit`, `pre-push` files under <current directory>/.dotfiles/.git/hooks (explained later on).
+It will also move `pre-commit`, `pre-push` files under path/to/directory/.dotfiles/.git/hooks (explained later on).
 
 If you already have any of the files/folders listed above, make sure to backup them, because the installer will overwrite any existing file/symlink.
 
