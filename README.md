@@ -2,7 +2,7 @@
 
 # .dotfiles
 
-My personal dotfiles forked by [Hecsall](https://github.com/Hecsall)
+My personal dotfiles forked by [Hecsall](https://github.com/Hecsall) with a little script in addition.
 
 I created a python script to insert api keys, ssh configurations and so on.
 
