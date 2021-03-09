@@ -2,7 +2,9 @@
 
 # .dotfiles
 
-Just a dotfiles repo with my aliases, functions and zsh configurations. I created a python script to insert api keys, ssh configurations and so on.
+My personal dotfiles forked by [Hecsall](https://github.com/Hecsall)
+
+I created a python script to insert api keys, ssh configurations and so on.
 
 Follow the original repo for a detailed info about each component.
 
@@ -43,6 +45,7 @@ That's all.
 ## **Python script**
 
 The python script under `script` folder lets you keep your personal api keys and secrets.
+
 In order to work it needs a folder called json and 3 files inside it: `gitconfig.json`, `aliases.json`, `functions.json` in which you can store your secrets like this:
 ```json
 [
@@ -62,4 +65,5 @@ The command is:
 python3 script/crypt.py -<option> 
 ```
 When committing you repo the `pre-comit` hook will ovveride your files and replace personal entries contained in your json with the related "safe" name.
+
 When pushing, instead it will revert these changes.
