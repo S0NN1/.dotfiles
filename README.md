@@ -2,28 +2,31 @@
 
 # .dotfiles
 
-Just a dotfiles repo with my aliases, functions and zsh configurations. I created a python script to insert api keys, ssh configurations and so on
+My personal dotfiles forked by [Hecsall](https://github.com/Hecsall) with a little script in addition.
+
+I created a python script to insert api keys, ssh configurations and so on.
+
+Follow the original repo for a detailed info about each component.
 
 ## **Requirements**
 
 Before running the `install.sh` script, be sure to have all the required dependencies listed below:
 
 - [ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
+- [Python3](https://www.python.org/)
 - [Nerd Fonts](https://www.nerdfonts.com/) _\*optional_\
-   Nerd Fonts includes "dev icons" along with the normal font, i used `MesloLGMDZ Nerd Font` in my terminal and `CaskaydiaCove Nerd Font` in Visual Studio Code. It's only really needed if you plan to use such icons.
+   Nerd Fonts includes "dev icons" along with the normal font, i used `MesloLGMDZ Nerd Font` in my terminal and `FiraCode Nerd Font` in Visual Studio Code. It's only really needed if you plan to use such icons.
 
 ## **Installation**
-
-> **Please note:**\
-> inside `.zshrc` and `install.sh` you will find some lines referring to files inside the `private/` folder.\
-> Thats a _private git submodule_ where i store other aliases and configurations that contains sensitive data (such as IP addresses , ports or git configurations).\
-> The install script will ignore those lines.
 
 The install script will create symlinks for the following files/folders:
 
 - `~/.zshrc`
 - `~/.nanorc`
 - `~/.nano/`
+- `~/.gitconfig`
+
+It will also move `pre-commit`, `pre-push` files under path/to/directory/.dotfiles/.git/hooks (explained later on).
 
 If you already have any of the files/folders listed above, make sure to backup them, because the installer will overwrite any existing file/symlink.
 
@@ -39,56 +42,28 @@ I use to keep that folder in `~/.dotfiles`
 
 That's all.
 
----
+## **Python script**
 
-## **Other notes**
+The python script under `script` folder lets you keep your personal api keys and secrets.
 
-### **ZSH config**
+In order to work it needs a folder called json and 3 files inside it: `gitconfig.json`, `aliases.json`, `functions.json` in which you can store your secrets like this:
+```json
+[
+    {
+        "name": "ssh",
+        "content": "ssh <your personal alias>"
+    }
+]
+```
+The script has 3 options available:
+- "-a" add and entry to a json file
+- "-h" hide your personal info
+- "-e" expose your personal info
 
-After trying Oh-my-zsh, spaceship, zprezto and starship, i decided to write my prompt by myself, including only the features i needed, this way it's much, much faster.\
-I divided every bit of functionality in different files inside the `partials/` folder.\
-I included [git-prompt.zsh](https://github.com/woefe/git-prompt.zsh), that manages the git status asynchronously to avoid an unresponsive terminal, and [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) to search previously used commands.
+The command is:
+```bash
+python3 script/crypt.py -<option> 
+```
+When committing you repo the `pre-comit` hook will ovveride your files and replace personal entries contained in your json with the related "safe" name.
 
-### **Python**
-
-- I usually use Python 3
-- When working on different python projects i use virtual environments: Python 3 ships with "venv" builtin.\
-   To create the env:
-  ```sh
-  # I usually use "venv" as <env_name>
-  $ python3 -m venv <env_name>
-  ```
-  Activate the env:
-  ```sh
-  $ source <env_name>/bin/activate
-  ```
-  Exit the env:
-  ```sh
-  $ deactivate
-  ```
-
-### **Node JS**
-
-- I prefer to use Node 12
-- I use **nvm** ([Node Version Manager](https://github.com/nvm-sh/nvm)) to manage different versions of Node:
-
-  This will install Node 12 as the "default" Node
-
-  ```sh
-  nvm install 12
-  ```
-
-  Then this will install Node 10 as supplementary version (for project compatibility)
-
-  ```sh
-  nvm install 10
-  ```
-
-  Switch version like this
-
-  ```sh
-  # Use Node 10
-  nvm use 10
-  # Now go back to the "default" (Node 12)
-  nvm use default # or nvm use 12
-  ```
+When pushing, instead it will revert these changes.
