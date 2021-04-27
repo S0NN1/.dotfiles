@@ -1,0 +1,7 @@
+no_unlock_indicator: false
+proxies:
+  http: ''
+  https: ''
+random_pic: true
+show_failed_attempts: true
+url: https://www.reddit.com/r/wallpaper/
